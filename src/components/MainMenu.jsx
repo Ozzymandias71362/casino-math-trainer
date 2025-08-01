@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import GameSelector from './GameSelector';
+import ModeSelector from './ModeSelector';
+import ShowOddsToggle from './ShowOddsToggle';
+import TimeLimitInput from './TimeLimitInput';
 
 export default function MainMenu() {
     const [game, setGame] = useState('blackjack');
@@ -16,6 +19,9 @@ export default function MainMenu() {
         <div className='main-menu'>
             <h1>Casino Math Trainer</h1>
             <GameSelector value={game} onChange={setGame} />
+            <ModeSelector value={mode} onChange={setMode} />
+            <ShowOddsToggle value={showOdds} onChange={setShowOdds} />
+            <TimeLimitInput value={timeLimit} onChange={setTimeLimit} />
         </div>
     )
 }
